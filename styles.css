@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Poppins", sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(30deg, #5D85FA, #AF59FF);
+    overflow-x:hidden 
+   
+}
+
+.container{
+    height: 100%;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    /* left: 0; */
+    background-color: aliceblue;
+    padding-top: 20px;
+    transition: all 0.9s ease;
+
+  }
+
+
+  .sidebar{
+    height: 100%;
+    width: 60px;
+    /* background: aliceblue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    overflow: hidden;
+    transition: all 0.9s ease;
+}
+
+.mainHead{
+    margin-left: 25px;
+    transition: all 0.9s ease;
+}
+
+img{
+    height: 40px;
+    width: 40px;
+    /* border-radius: 50%; */
+    margin-left: 13px;
+    transition: all 0.9s ease;
+}
+
+.items{
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    color: #000000CC;
+    margin-left: 0px;
+    padding: 10px 0px;
+    transition: all 0.9s ease;
+}
+
+.sidebar li{
+    margin-left: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: all 0.9s ease;
+}
+
+.items i{
+    margin: 0 10px;
+    transition: all 0.9s ease;
+}
+
+.para{
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.sidebar li:not(.logout-btn):hover {
+    background:  linear-gradient(30deg, #5D85FA, #AF59FF);
+    transition: all 0.9s ease;
+}
+
+.logout-btn{
+    margin-top: 50px;
+    color: #B70202;
+}
+
+.logout-btn:hover{
+    background-color: linear-gradient(30deg, #5D85FA, #AF59FF);
+}
+
+.toggler{
+    position: absolute;
+    top: 0;
+    left: 60px;
+    padding: 10px 15px;
+    font-size: 1.4rem;
+    transition: all 0.9s ease;
+}
+
+.toggler #toggle-cross {
+    display: none;
+}
+
+.active.toggler #toggle-cross {
+    display: block;
+}
+
+.active.toggler #toggle-bars {
+    display: none;
+}
+
+.active.toggler {
+    left: 170px;
+}
+
+.active.sidebar {
+    width: 220px;
+    transition: all 0.9s ease;
+}
+
+.active.container {
+    width: 220px;
+    transition: all 0.9s ease;
+}
+
+.active.sidebar .para{
+    opacity: 1;
+    transition: all 0.9s ease;          
+}
+
+.MainHead   {
+    position: relative;
+    left: 10px;
+}
+
+.imgbg{
+    height: 300px;
+    width: 300px;
+    margin-top: 150px;
+    background: linear-gradient(30deg, #5D85FA, #AF59FF);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    transition: 0.9s ease;
+    filter: grayscale(100%);
+    border-radius: 50px;
+}
+
+.imgbg:hover {
+    transform: scale(1.4);
+    transition: 0.9s ease;
+    filter: none;
+}
+
+.pfp1 {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    /* right: 50px; */
+}
+
+.logoitem {
+    margin-left: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: all 0.9s ease;
+}
+
+
+/** Main div*/
+.main {
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.9s ease;
+}
+
+.active.main {
+    left: 20%;
+    transition: 0.9s ease;
+}
+
+/** Login page */
+
+.Login {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.login-form {
+    background: rgba(64, 64, 64, 0.15);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    border-radius: 16px;
+    backdrop-filter: blur(25px);
+    text-align: center;
+    color: white;
+    width: 400px;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.15);
+}
+
+.login-title {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.input-box {
+    margin: 20px 0;
+    position: relative;
+}
+.input-box input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 12px 12px 12px 45px;
+    border-radius: 99px;
+    outline: 3px solid transparent;
+    transition: 0.3s;
+    font-size: 17px;
+    color: white;
+    font-weight: 600;
+}
+.input-box input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 17px;
+    font-weight: 500;
+}
+.input-box input:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.3);
+}
+.input-box input::-ms-reveal {
+    filter: invert(100%);
+}
+
+.input-box i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.remember-forgot-box {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    font-size: 15px;
+}
+
+.remember-forgot-box label {
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+}
+.remember-forgot-box input {
+    accent-color: white;
+    cursor: pointer;
+}
+
+.remember-forgot-box a {
+    color: white;
+    text-decoration: none;
+}
+.remember-forgot-box a:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px 0;
+    background: #2F9CF4;
+    border: none;
+    border-radius: 99px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.login-btn:hover {
+    background: #0B87EC;
+}
+
+.register {
+    margin-top: 15px;
+    font-size: 15px;
+}
+.register a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+.register a:hover {
+    text-decoration: underline;
+}
+
+/** Account page */
+
+
+.pfp {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    transition: all 0.9s ease;
+    margin-top: 50%;
+}
+
+.Proffesio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.9s ease;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.9s ease;
+    top: 0.9%;
+}
+
+.active.main {
+    /* left: 220px; */
+    transition: all 0.9s ease;
+}
+
+.main.NameAccountt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    left: 100px
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+.Animated-Radial-Menu {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  min-height: 100px;
+}
+.Animated-Radial-Menu .menu {
+  position: absolute ;
+  width: 280px;
+  height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Animated-Radial-Menu .menu .toggle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #2f363e;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 100;
+  font-size: 2em;
+  transition: transform 0.5s;
+}
+.Animated-Radial-Menu .menu li {
+  position: absolute;
+  left: 0;
+  list-style: none;
+  transition: 0.3s;
+  transition-delay: calc(0.04s * var(--i));
+  transform: rotate(0deg) translateX(110px);
+  transform-origin: 140px;
+}
+.Animated-Radial-Menu .menu li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  color: var(--clr);
+  border: 2px solid var(--clr);
+  border-radius: 50%;
+  font-size: 1.5em;
+  transform: rotate(calc(-45deg * var(--i)));
+  transition: 0.3s;
+}
+.Animated-Radial-Menu .menu li a:hover {
+  background: var(--clr);
+  color: #333;
+  box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr), 0 0 50px var(--clr);
+}
+.Animated-Radial-Menu .menu.active .toggle {
+  transform: rotate(315deg);
+  
+}
+.Animated-Radial-Menu .menu.active li {
+  transform: rotate(calc(45deg * var(--i))) translateX(0px);
+}
+
+.toggle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #2f363e;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 100;
+    font-size: 2em;
+    transition: transform 0.5s;
+}
+
+.menu {
+    position: relative;
+    width: 280px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 85%;
+    bottom: 94%;
+}
+
+
+.Animated-Radial-Menu .menu.active .close {
+    position: absolute;
+    width: 160px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 100;
+    transition: 0,9s ease;
+}
+
+.Animated-Radial-Menu .menu .close {
+    opacity: 0;
+    transition: 0,9s ease;
+}
+
+.Animated-Radial-Menu .menu .open {
+    position: absolute;
+    width: 160px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0,9s ease;
+}
+
+
+.Animated-Radial-Menu .menu.active .open {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0,9s ease;
+}
+
+
+.pfp:hover {
+    transform: scale(1.4);
+}
+
+
+
+.profile {
+    margin-top: 50%;
+}
+
+.ig {
+    right: 5px;
+    margin-top: 3px;
+    position: relative;
+}

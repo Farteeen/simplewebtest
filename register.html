@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body class="Login">
+    <script src="script.js"></script>
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+    <form action="#" class="login-form">
+        <h1 class="login-title">Register</h1>
+
+        <div class="input-box">
+            <i class='bx bxs-user'></i>
+            <input type="text" placeholder="Email" id="usuario"> 
+        </div>
+        <div class="input-box">
+            <i class='bx bxs-lock-alt'></i>
+            <input type="password"  placeholder="Password" id="clave">  
+        </div>
+
+        <div class="input-box">
+            <i class='bx bxs-lock-alt'></i>
+            <input type="password"  placeholder="Confirm Password" id="clave">  
+        </div>
+
+        <div class="remember-forgot-box">
+            <label for="remember">
+                <input type="checkbox" id="remember">
+                Remember me
+            </label>
+            
+        </div>
+
+        <button class="login-btn" onclick="login()" > Register
+          <!--<a href="main.html" style="color: white;">Login</a>  -->
+        </button>
+
+        <p class="register">
+           Already have an account?
+            <a href="index.html">Login</a>
+        </p>
+    </form>
+    
+</body>
+</html>
